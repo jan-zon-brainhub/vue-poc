@@ -20,6 +20,27 @@ const router = createRouter({
       name: 'login',
       component: () => import('../views/LoginView.vue'),
     },
+    {
+      path: '/add-recipe',
+      name: 'add-recipe',
+      component: () => import('../views/AddRecipeView.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/recipe/:id/edit',
+      name: 'edit-recipe',
+      component: () => import('../views/EditRecipeView.vue'),
+      meta: {
+        requiresAuth: true,
+      },
+    },
+    {
+      path: '/recipe/:id',
+      name: 'recipe',
+      component: () => import('../views/RecipeView.vue'),
+    },
   ],
 })
 

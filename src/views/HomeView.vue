@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import UnauthorizedOnly from '@/components/shared/auth/UnauthorizedOnly.vue'
-import AuthorizedOnly from '@/components/shared/auth/AuthorizedOnly.vue'
-import { useAuthStore } from '@/stores/auth.ts'
+import PortalHeader from '@/components/shared/ui/PortalHeader.vue'
+import { useRecipesQuery } from '@/queries/recipe.ts'
+import RecipeCard from '@/components/recipe/RecipeCard.vue'
 
-const authStore = useAuthStore()
+const { data: recipes } = useRecipesQuery({
+  limit: 20,
+})
 </script>
 
 <template>
   <main>
-    <h4>Welcome on MyRecipes XD</h4>
-    <UnauthorizedOnly>
-      <RouterLink to="/login">Login</RouterLink>
-    </UnauthorizedOnly>
-    <AuthorizedOnly>
-      <RouterLink to="#" @click="authStore.logout()">Logout</RouterLink>
-    </AuthorizedOnly>
+    <PortalHeader />
+    <div>
+      <v-row class="pt-5">
+        <v-col v-for="recipe in recipes" :key="recipe.id" :lg="3" :md="4" :sm="6">
+          <RecipeCard :recipe="recipe" />
+        </v-col>
+      </v-row>
+    </div>
   </main>
 </template>
 

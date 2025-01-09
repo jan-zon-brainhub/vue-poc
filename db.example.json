@@ -13,45 +13,48 @@
       "id": 1,
       "title": "Simple Pasta",
       "description": "A quick meal using minimal ingredients—perfect for busy weeknights.",
-      "image_url": "https://mosso.pl/wp-content/uploads/2022/05/szakszuka.jpg",
+      "imageUrl": "https://mosso.pl/wp-content/uploads/2022/05/szakszuka.jpg",
       "userId": "1"
     }
   ],
   "ingredients": [
     {
       "recipeId": 1,
-      "ingredient_name": "Pasta",
+      "name": "Pasta",
       "quantity": 200,
       "measure": "grams",
       "id": 1
     },
     {
       "recipeId": 1,
-      "ingredient_name": "Salt",
+      "name": "Salt",
       "quantity": 1,
       "measure": "teaspoon",
       "id": 2
     },
     {
       "recipeId": 1,
-      "ingredient_name": "Olive oil",
+      "name": "Olive oil",
       "quantity": 2,
-      "measure": "tablespoons",
+      "measure": "tablespoon",
       "id": 3
     }
   ],
   "steps": [
     {
+      "id": 1,
       "recipeId": 1,
       "stepNumber": 1,
       "stepDescription": "Boil water in a pot and add 1 teaspoon of salt."
     },
     {
+      "id": 2,
       "recipeId": 1,
       "stepNumber": 2,
       "stepDescription": "Add the pasta and cook according to the package directions."
     },
     {
+      "id": 3,
       "recipeId": 1,
       "stepNumber": 3,
       "stepDescription": "Drain the pasta, drizzle with olive oil, and serve."

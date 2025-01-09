@@ -10,7 +10,7 @@ import LoginForm from '@/components/auth/LoginForm.vue'
 
 <style scoped>
 .login-container {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: grid;
   place-items: center;

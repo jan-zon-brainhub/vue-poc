@@ -5,18 +5,16 @@ import SnackbarQueue from '@/components/SnackbarQueue.vue'
 
 <template>
   <v-app class="v-application">
-    <RouterView />
+    <v-main>
+      <v-container fluid> <RouterView /> </v-container>
+    </v-main>
     <SnackbarQueue />
   </v-app>
 </template>
 
 <style scoped>
-body {
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
-}
 .v-application {
-  background-color: #0093e9;
-  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 </style>

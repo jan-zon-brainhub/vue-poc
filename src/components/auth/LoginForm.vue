@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref, toValue } from 'vue'
 import { useAuthStore } from '@/stores/auth.ts'
-import { BadRequestError, HttpError } from '@/shared/request-utils.ts'
+import { BadRequestError } from '@/shared/request-utils.ts'
 import type { SubmitEventPromise } from 'vuetify'
 import { email, required } from '@/shared/form-validation/validators.ts'
 import { useRouter } from 'vue-router'
